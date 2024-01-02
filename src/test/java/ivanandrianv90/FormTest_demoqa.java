@@ -27,38 +27,38 @@ public class FormTest_demoqa {
         executeJavaScript("$('#fixedban').remove()");
         executeJavaScript("$('footer').remove()");
 
-        $("#firstName").setValue("Peter");
-        $("#lastName").setValue("Ivanov");
-        $("#userEmail").setValue("ivanov_petya@test.com");
+        $("#firstName").setValue("Ivan");
+        $("#lastName").setValue("Andrianov");
+        $("#userEmail").setValue("Ivanandrianv90@gmail.com");
         $("#genterWrapper").find(byText("Male")).click();
-        $("#userNumber").setValue("7123456770");
+        $("#userNumber").setValue("9106756912");
         $(".react-datepicker-wrapper").click();
-        $(".react-datepicker__month-select").selectOption("February");
-        $(".react-datepicker__year-select").selectOption("1980");
-        $(".react-datepicker__day--015").click();
+        $(".react-datepicker__month-select").selectOption("January");
+        $(".react-datepicker__year-select").selectOption("1992");
+        $(".react-datepicker__day--027").click();
         $("#subjectsInput").setValue("Computer Science").pressEnter();
         $("#subjectsInput").setValue("Economics").pressEnter();
         $("#hobbiesWrapper").find(byText("Sports")).click();
         $("#hobbiesWrapper").find(byText("Music")).click();
         $("#state").click();
-        $("#stateCity-wrapper").find(byText("Haryana")).click();
+        $("#stateCity-wrapper").find(byText("NCR")).click();
         $("#city").click();
-        $("#stateCity-wrapper").find(byText("Karnal")).click();
-        $("#currentAddress").setValue("Marra avenu, 1");
+        $("#stateCity-wrapper").find(byText("Noida")).click();
+        $("#currentAddress").setValue("Example street, 13");
         $("#uploadPicture").uploadFromClasspath("test.jpg");
         $("#submit").click();
 
 
-        $(".modal-content").shouldHave(text("Peter Ivanov"));
-        $(".modal-content").shouldHave(text("ivanov_petya@test.com"));
+        $(".modal-content").shouldHave(text("Ivan Andrianov"));
+        $(".modal-content").shouldHave(text("Ivanandrianv90@gmail.com"));
         $(".modal-content").shouldHave(text("Male"));
-        $(".modal-content").shouldHave(text("7123456770"));
-        $(".modal-content").shouldHave(text("15 February,1980"));
+        $(".modal-content").shouldHave(text("9106756912"));
+        $(".modal-content").shouldHave(text("27 January,1992"));
         $(".modal-content").shouldHave(text("Computer Science, Economics"));
         $(".modal-content").shouldHave(text("Sports, Music"));
         $(".modal-content").shouldHave(text("test.jpg"));
-        $(".modal-content").shouldHave(text("Marra avenu, 1"));
-        $(".modal-content").shouldHave(text("Haryana Karnal"));
+        $(".modal-content").shouldHave(text("Example street, 13"));
+        $(".modal-content").shouldHave(text("NCR Noida"));
 
     }
 }
