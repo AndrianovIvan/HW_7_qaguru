@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.executeJavaScript;
 
-public class FormTest_demoqa {
+public class FormTestDemoqaTests {
 
     @BeforeAll
     static void beforeAll() {
@@ -22,7 +22,7 @@ public class FormTest_demoqa {
     }
 
     @Test
-    void fillFormTest() {
+    void FillFormTests() {
         Selenide.open("/automation-practice-form");
         executeJavaScript("$('#fixedban').remove()");
         executeJavaScript("$('footer').remove()");
@@ -48,7 +48,7 @@ public class FormTest_demoqa {
         $("#uploadPicture").uploadFromClasspath("test.jpg");
         $("#submit").click();
 
-
+        //проверка
         $(".modal-content").shouldHave(text("Ivan Andrianov"));
         $(".modal-content").shouldHave(text("Ivanandrianv90@gmail.com"));
         $(".modal-content").shouldHave(text("Male"));
