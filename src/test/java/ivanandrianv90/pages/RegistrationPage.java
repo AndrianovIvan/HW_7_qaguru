@@ -1,9 +1,9 @@
-package pages;
+package ivanandrianv90.pages;
 
 import com.codeborne.selenide.SelenideElement;
-import pages.components.CalendarComponent;
-import pages.components.FileUploaderComponent;
-import pages.components.ResultTableComponent;
+import ivanandrianv90.pages.components.CalendarComponent;
+import ivanandrianv90.pages.components.FileUploaderComponent;
+import ivanandrianv90.pages.components.ResultTableComponent;
 
 import static com.codeborne.selenide.Condition.hidden;
 import static com.codeborne.selenide.Condition.visible;
@@ -115,7 +115,7 @@ public class RegistrationPage {
         return this;
     }
 
-    public RegistrationPage submit() {
+    public RegistrationPage submitBtnClick() {
         submitButton.click();
 
         return this;

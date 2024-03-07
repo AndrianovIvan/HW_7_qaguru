@@ -1,7 +1,7 @@
-package ivanandrianv90;
+package ivanandrianv90.tests;
 
+import ivanandrianv90.pages.TextBoxPage;
 import org.junit.jupiter.api.Test;
-import pages.TextBoxPage;
 
 public class TextBoxPageObjectsTests {
     TextBoxPage textBoxPage = new TextBoxPage();
@@ -13,7 +13,7 @@ public class TextBoxPageObjectsTests {
                 .setEmailInput("Test@Email.com")
                 .setCurrentAddressInput("TestCurrentAddress")
                 .setPermanentAddressInput("TestPermanentAddress")
-                .submit();
+                .submitBtnClick();
 
         textBoxPage.nameCheck("TestFullName")
                 .emailCheck("Test@Email.com")

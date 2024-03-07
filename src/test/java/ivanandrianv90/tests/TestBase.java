@@ -1,4 +1,4 @@
-package ivanandrianv90;
+package ivanandrianv90.tests;
 
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;

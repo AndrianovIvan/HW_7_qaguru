@@ -1,4 +1,4 @@
-package pages;
+package ivanandrianv90.pages;
 
 import com.codeborne.selenide.SelenideElement;
 
@@ -48,7 +48,7 @@ public class TextBoxPage {
         return this;
     }
 
-    public TextBoxPage submit() {
+    public TextBoxPage submitBtnClick() {
         submitButton.click();
 
         return this;

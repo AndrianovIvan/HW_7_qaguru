@@ -1,7 +1,7 @@
-package ivanandrianv90;
+package ivanandrianv90.tests;
 
+import ivanandrianv90.pages.RegistrationPage;
 import org.junit.jupiter.api.Test;
-import pages.RegistrationPage;
 
 public class RegistrationPageObjectsTests extends TestBase {
 
@@ -23,7 +23,7 @@ public class RegistrationPageObjectsTests extends TestBase {
                 .setCurrentAddress("CurrentAddressValue")
                 .setState("Rajasthan")
                 .setCity("Jaipur")
-                .submit();
+                .submitBtnClick();
 
         registrationPage.checkResult("Student Name", "FirstName LastName")
                 .checkResult("Student Email", "useremail@value.com")
@@ -45,7 +45,7 @@ public class RegistrationPageObjectsTests extends TestBase {
                 .setGender("Female")
                 .setUserNumber("9183214567")
                 .setDateOfBirth("30", "July", "2008")
-                .submit();
+                .submitBtnClick();
 
         registrationPage.checkResult("Student Name", "FirstName LastName")
                 .checkResult("Student Email", "\t")
@@ -63,7 +63,7 @@ public class RegistrationPageObjectsTests extends TestBase {
     @Test
     void allFieldsAreEmptyTest() {
         registrationPage.openPage()
-                .submit();
+                .submitBtnClick();
 
         registrationPage.registrationFailureCheck();
 
@@ -76,7 +76,7 @@ public class RegistrationPageObjectsTests extends TestBase {
                 .setLastName("LastName")
                 .setGender("Female")
                 .setUserNumber("123456789")
-                .submit();
+                .submitBtnClick();
 
         registrationPage.registrationFailureCheck();
 
